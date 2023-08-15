@@ -1,0 +1,50 @@
+<section class="featured section container" id="featured">
+  <h2 class="section__title">Featured</h2>
+
+  <div class="featured__container grid">
+    <article class="featured__card" *ngFor="let tempProduct of products">
+      <span class="featured__tag">Sale</span>
+      <a routerLink="/products/{{ tempProduct.id }}">
+        <img src="{{ tempProduct.imageUrl }}" alt="" class="featured__img" />
+      </a>
+      <div class="featured__data">
+        <a routerLink="/products/{{ tempProduct.id }}">
+          <h3 class="featured__title">{{ tempProduct.name }}</h3>
+        </a>
+        <span class="featured__price">{{
+          tempProduct.unitPrice | currency : "USD"
+        }}</span>
+      </div>
+
+      <button (click)="addToCart(tempProduct)" class="button featured__button">ADD TO CART</button>
+    </article>
+
+    <!--If products empty then display a message-->
+    <div
+      *ngIf="products?.length === 0"
+      class="alert alert-warning col-md-12"
+      role="alert"
+    >
+      No Product found.
+    </div>
+  </div>
+
+
+  <div class="footer-pagination">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-9" style="padding-left: 30%">
+            <ngb-pagination
+              [(page)] = "thePageNumber"
+              [pageSize] = "thePageSize"
+              [collectionSize] = "theTotalElements"
+              (pageChange) = "listProducts()" >
+            </ngb-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

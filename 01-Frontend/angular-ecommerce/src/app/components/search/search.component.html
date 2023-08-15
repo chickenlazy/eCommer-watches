@@ -1,0 +1,4 @@
+<div class="new__search">
+  <input #myInput type="text" id="search" placeholder="Tìm kiếm..." (keyup.enter)="doSearch(myInput.value)"/>
+  <button (click)="doSearch(myInput.value)" id="search-button"><i class="fa fa-search"></i></button>
+</div>

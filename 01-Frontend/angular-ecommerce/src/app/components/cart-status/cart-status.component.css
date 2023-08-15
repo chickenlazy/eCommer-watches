@@ -1,0 +1,14 @@
+/* Kiểu cho giá tiền */
+
+  /* Kiểu cho số lượng sản phẩm */
+  #cart-shop span {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  a {
+    color: black
+  }

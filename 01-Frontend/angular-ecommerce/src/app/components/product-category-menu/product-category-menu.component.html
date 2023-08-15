@@ -1,0 +1,13 @@
+
+ <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+        <li class="nav__item" *ngFor="let tempProductCategory of productCategories">
+            <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link" class="nav__link active-link">{{ tempProductCategory.categoryName }}</a>
+        </li>
+    </ul>
+
+    <div class="nav__close" id="nav-close">
+
+        <i class='bx bx-x' ></i>
+    </div>
+</div> 

@@ -1,0 +1,10 @@
+<div class="nav__shop" id="cart-shop">
+  <a routerLink="/cart-details">
+    <i class="bx bx-shopping-bag">
+      <span class="price">{{ totalPrice | currency : "USD" }}</span>
+  
+      <span>{{ totalQuantity }}</span>
+    </i>
+  </a>
+ 
+</div>

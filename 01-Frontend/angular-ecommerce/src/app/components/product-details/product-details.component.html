@@ -1,0 +1,41 @@
+ <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="/assets/images/products/england_watches/england_watches-1000.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        Facebook
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        Twitter
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        Instagram
+                    </a>
+                </div>
+
+                <div class="home__data">
+                    <div *ngIf="product!= null">
+                        <h1 class="home__title">NEW WATCH <br> {{ product.name }}</h1>
+                        <p class="home__description">
+                            {{ product.description }}
+                        </p>
+                        <span class="home__price">{{ product.unitPrice | currency: 'USD' }}</span>
+    
+                        <div class="home__btns">
+                            <a href="#" class="button button--gray button--small">
+                                Discover
+                            </a>
+    
+                            <button (click)="addToCart()" class="button home__button">ADD TO CART</button>
+                        </div>
+                    </div>
+                  
+                </div>
+
+                
+                
+            </div>
+        </section>
